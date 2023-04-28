@@ -1,18 +1,19 @@
-package exercicio_iniciante01;
+package exercicio_iniciante02;
 import java.util.Scanner;
 
 public class exInit01 {
 	public static void main (String [] args) {
-		Scanner sc = new Scanner (System.in);
+		Scanner sc = new Scanner(System.in);
+		int num;
 		
-		int x, y, soma;
+		System.out.print("Enter a number: ");
+		num = sc.nextInt();
 		
-		System.out.print("Digite um valor: ");
-		x = sc.nextInt();
-		System.out.print("Digite um valor: ");
-		y = sc.nextInt();
-		soma = x + y;
-		System.out.print("A soma é: " + soma);
+		if (num >= 0) {
+			System.out.println("POSITIVO");
+		} else {
+			System.out.println("NEGATIVO");
+		}
 		sc.close();
 	}
 

@@ -1,31 +1,35 @@
-package exercicio_iniciante01;
+package exercicio_iniciante02;
 import java.util.Scanner;
 
 public class exInit05 {
 	public static void main (String [] args) {
-		Scanner sc = new Scanner (System.in);
+		Scanner sc = new Scanner(System.in);
 		
-		int codPecas1, numPecas1, codPecas2, numPecas2;
-		float valorPecas1, valorPecas2;
-		float soma;
+		System.out.println("1- HOT DOG U$4.00\n"
+				+ "2- X-Salad U$4.50\n"
+				+ "3- X-Bacon U$5.00\n"
+				+ "4- Toasted Bread U$2.00\n"
+				+ "5- Soda U$1.50");
 		
-		System.out.print("Código da peça: ");
-		codPecas1 = sc.nextInt();
-		System.out.print("Número de peças: ");
-		numPecas1 = sc.nextInt();
-		System.out.print("Valor da peça: ");
-		valorPecas1 = sc.nextFloat();
+		System.out.print("Enter food code: ");
+		int code = sc.nextInt();
+		System.out.print("Enter quantity: ");
+		int quantity = sc.nextInt();
 		
-		System.out.print("Código da peça 2: ");
-		codPecas2 = sc.nextInt();
-		System.out.print("Número de peças: ");
-		numPecas2 = sc.nextInt();
-		System.out.print("Valor da peça: ");
-		valorPecas2 = sc.nextFloat();
+		double total = 0;
+		if (code == 1) {
+			total = quantity * 4.00;
+		} else if (code == 2) {
+			total = quantity * 4.50;
+		} else if (code == 3) {
+			total = quantity * 5.00;
+		} else if (code == 4) {
+			total = quantity * 2.00;
+		} else if (code == 5) {
+			total = quantity * 1.50;
+		}
 		
-		soma = (valorPecas1 * numPecas1) + (valorPecas2 * numPecas2);
-		System.out.printf("Valor total: %.2f", soma);
+		System.out.printf("Final price: U$ %.2f\n", total);
 		sc.close();
 	}
-
 }
